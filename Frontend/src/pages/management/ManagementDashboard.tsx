@@ -126,7 +126,7 @@ export default function ManagementDashboard() {
         {adminUser?.role === 'super_admin' && (
           <select
             value={hostel}
-            onChange={e => setHostel(e.target.value)}
+            onChange={e => setHostel(e.target.value as "RHR" | "APJ" | "KHR" | "KCHR")}
             className="bg-gray-900 border border-white/10 rounded-xl px-4 py-2.5 text-white text-sm focus:outline-none focus:border-emerald-500 transition-all"
           >
             {HOSTELS.map(h => <option key={h} value={h}>{h}</option>)}
